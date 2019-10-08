@@ -1,0 +1,13 @@
+Description:- This script can be used to automate the creation of a database, a user specific for that database and also login credentials
+              for that database. This can be implemented in a CI server to automate the task by just entering the parameters required and
+              the result will be displayed as the credentails to access the new database.
+
+Technology used:- Powershell and T-SQL
+
+This folder contains two files.
+1. autonew- This file performs the action on the database by using the master credentials and create a database for user. Suppose for a
+            client we need a new type of database then for that this script will perform the action of creating the database. Creating a
+            user specific for that database and also it will create a login for that database.
+2.test_working- This file is a powershell script. It helps us in connecting to that database and will perform the actions of creating databse
+                , user, login by using the autonew file. We enter the database name and master credentials and it will automatically create
+                 all the required resources. It will also create a random password which will be displayed after the create is successful.
