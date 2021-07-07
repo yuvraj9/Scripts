@@ -11,7 +11,7 @@ This is script output to output file with the following properties
 - These commands should be present on your system before running the script - lsof, ps, sed, cut and awk
 
 ## How to run this script
-- Its pretty simple to run this script. Below commands will help
+- Its pretty simple to run this script. Download the script on your machine then run below commands
 ```
 chmod +x process-details.sh
 ./process-details.sh
