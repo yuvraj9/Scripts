@@ -1,9 +1,9 @@
-## This script can be used to get third most CPU and Memory consuming process.
-This is script output to output file with the following properties
+## Script can be used to get third most CPU and Memory consuming process.
+Script writes output to the output file with the following properties:-
 - Process Name 
 - % CPU  used 
 - % Memory used  
-- PORT 
+- PORT
 - PID
 
 ## Prerequisites
@@ -11,7 +11,6 @@ This is script output to output file with the following properties
 - These commands should be present on your system before running the script - lsof, ps, sed, cut and awk
 
 ## How to run this script
-- Its pretty simple to run this script. Below commands will help
 ```
 chmod +x process-details.sh
 ./process-details.sh
