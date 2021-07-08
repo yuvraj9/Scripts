@@ -5,7 +5,7 @@ resourceFunction() {
     # Defining default variable
     RESOURCE=""
 
-    # Getting process with 3rd highest usage and sorting according to argument value
+    # Getting process with 3rd highest resource usage and sorting according to argument value
     OUTPUT=$(ps -eo pid,%mem,%cpu,cmd --sort=$1 | sed -n '4 p')
 
     # Getting individual attributes and assigning variables to them
@@ -15,13 +15,19 @@ resourceFunction() {
     COMMAND=$(echo $OUTPUT | cut -d" "  -f4-)
     PORT=$(lsof -Pan -p $PID -i | awk '{print $9}' | sed -n '2 p')
 
-    # Putting the details in a file
+    # If condition to get resource name according to argument
     if [ "$1" == "%mem" ]; then
         RESOURCE="Memory"
     else
         RESOURCE="CPU"
     fi
+
     DATE=$(date)
+
+    # Making an empty file
+    echo "" > process-details.txt
+
+    # Putting the details in a file
     echo -e "$DATE \n[ Details of process which has 3rd highest $RESOURCE usage ] \nPID - $PID \nMemory Usage - $MEMORY_USAGE \nCPU Usage - $CPU_USAGE \nCommand/Name - $COMMAND \nPort - $PORT \n" >> process-details.txt
     
 }
