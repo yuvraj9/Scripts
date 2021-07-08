@@ -15,3 +15,7 @@ Script writes output to the output file with the following properties:-
 chmod +x process-details.sh
 ./process-details.sh
 ```
+
+## How to check output
+- This script creates a file in which output is stored. File name is - ```process-details.txt```.
+- This file wil be created in same folder where you are running your script
