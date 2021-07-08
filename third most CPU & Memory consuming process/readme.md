@@ -19,3 +19,5 @@ chmod +x process-details.sh
 ## How to check output
 - This script creates a file in which output is stored. File name is - ```process-details.txt```.
 - This file wil be created in same folder where you are running your script
+- Sharing screenshot of a sample output
+<img width="535" alt="Screenshot 2021-07-08 at 10 20 49 AM" src="https://user-images.githubusercontent.com/56301121/124864224-2dd71d80-dfd6-11eb-839b-13374c812650.png">
